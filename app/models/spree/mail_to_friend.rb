@@ -14,7 +14,7 @@ class Spree::MailToFriend
   def initialize(opts = {})
     @sender_email = opts[:sender_email] || ''
     @sender_name  = opts[:sender_name]  || (@sender_email.split('@', 2)[0] || '').titleize
-    @subject      = opts[:subject]      || Spree.t(:sender_subject, scope: :email_to_friend, sender_name: @sender_name, site: site_url)
+    @subject      = opts[:subject]      || t('spree.sender_subject', scope: :email_to_friend, sender_name: @sender_name, site: url)
 
     @recipients = []
     @invalid_recipients = []
@@ -44,7 +44,7 @@ class Spree::MailToFriend
 
   private
 
-  def site_url
-    Spree::Store.current.try(:url)
+  def url
+    Spree::current_store.try(:url)
   end
 end

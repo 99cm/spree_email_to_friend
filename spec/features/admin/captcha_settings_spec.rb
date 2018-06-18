@@ -6,7 +6,7 @@ RSpec.feature 'Admin Captcha Settings', :js do
       visit spree.edit_admin_captcha_settings_path
     end
 
-    scenario 'display Captcha Settings on front end' do
+    scenario 'display Captcha Settings on frontend' do
       expect(page).to have_text 'Captcha Settings'
       choose 'Yes'
       click_button 'Update'

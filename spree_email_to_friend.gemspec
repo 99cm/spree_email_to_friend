@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.version     = SpreeEmailToFriend.version
   s.summary     = 'Spree extension to send product recommendations to friends'
   s.description = s.summary
-  s.required_ruby_version = '>= 2.1.0'
+  s.required_ruby_version = '>= 2.3.1'
 
   s.authors      = ['Jorge Calás Lozano', 'Roman Smirnov', 'Trung Lê']
   s.homepage     = 'https://github.com/spree-contrib/spree_email_to_friend'
@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = false
 
-  s.add_runtime_dependency 'spree_core', '>= 3.1.0', '< 4.0'
+  s.add_runtime_dependency 'spree_core', '>= 3.6.0', '< 4.0'
   s.add_runtime_dependency 'spree_extension'
   s.add_runtime_dependency 'recaptcha'
 
